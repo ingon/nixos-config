@@ -24,6 +24,12 @@
     ../../home/alacritty.nix
   ];
 
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      monospace-font-name = "MesloLGM Nerd Font Mono 10";
+    };
+  };
+
   systemd.user.services.dropbox = {
     Unit = {
       Description = "Dropbox service";

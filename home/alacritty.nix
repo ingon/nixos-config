@@ -4,8 +4,9 @@
     enable = true;
     settings = {
       font = {
-        # size = 15;
-        offset.y = 2;
+        normal.family = "MesloLGM Nerd Font Mono";
+        size = 10;
+        # offset.y = 2;
       };
 
       colors.primary = {
