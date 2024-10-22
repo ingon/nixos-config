@@ -8,10 +8,11 @@
 
   # configuration follows
   home.packages = with pkgs; [
-    nil
-    nixpkgs-fmt
-    pkgs.unstable.dropbox
     ripgrep
+    fd
+    bat
+    jq
+    pkgs.unstable.dropbox
     synology-drive-client
   ];
 

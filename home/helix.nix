@@ -1,5 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    nil
+    nixpkgs-fmt
+  ];
+
   programs.helix = {
     enable = true;
     defaultEditor = true;
