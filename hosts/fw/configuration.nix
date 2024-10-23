@@ -26,6 +26,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # see https://github.com/tailscale/tailscale/issues/4432#issuecomment-1112819111
+  networking.firewall.checkReversePath = "loose";
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
