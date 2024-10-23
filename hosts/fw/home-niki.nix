@@ -22,6 +22,7 @@
     ../../home/git.nix
     ../../home/helix.nix
     ../../home/alacritty.nix
+    ../../home/neovim.nix
   ];
 
   dconf.settings = {
