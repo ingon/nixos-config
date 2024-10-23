@@ -59,6 +59,8 @@
           let g:go_highlight_functions=1
           let g:go_highlight_operators=1
           let g:go_highlight_types=1
+          let g:go_highlight_variable_assignments = 0
+          let g:go_highlight_variable_declarations = 0
           let g:go_fmt_options = {'goimports': '-local xxx'}
 
           nmap <silent> <leader>x :GoBuildTags ${"''"}<CR>
