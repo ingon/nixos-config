@@ -22,6 +22,10 @@
       theme = "molokai";
       editor = {
         true-color = true;
+        statusline = {
+          center = [ "file-type" "file-encoding" "version-control" ];
+          right = [ "diagnostics" "selections" "register" "position-percentage" "position" "file-encoding" ];
+        };
         cursor-shape = {
           insert = "bar";
         };
