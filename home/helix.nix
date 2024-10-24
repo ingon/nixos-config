@@ -8,10 +8,16 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    languages.language = [{
-      name = "nix";
-      formatter.command = "nixpkgs-fmt";
-    }];
+    languages = {
+      language-server.nil = {
+        command = "nil";
+        config.nil.formatting.command = [ "nixpkgs-fmt" ];
+      };
+      language = [{
+        name = "nix";
+        auto-format = true;
+      }];
+    };
     settings = {
       theme = "molokai";
       editor = {
