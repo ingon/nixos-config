@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.username = "niki";
   home.homeDirectory = "/home/niki";
@@ -23,6 +23,7 @@
     ../../home/helix.nix
     ../../home/alacritty.nix
     ../../home/neovim.nix
+    ../../home/neovim-go.nix
   ];
 
   dconf.settings = {
