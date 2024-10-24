@@ -13,6 +13,10 @@
 
   security.sudo.wheelNeedsPassword = false;
 
+  imports = [
+    ./neovim.nix
+  ];
+
   programs.fish = {
     enable = true;
     interactiveShellInit = ''

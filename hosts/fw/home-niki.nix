@@ -8,22 +8,12 @@
 
   # configuration follows
   home.packages = with pkgs; [
-    ripgrep
-    fd
-    bat
-    jq
     pkgs.unstable.dropbox
     synology-drive-client
   ];
 
   imports = [
-    ../../home/eza.nix
-    ../../home/fish.nix
-    ../../home/git.nix
-    ../../home/helix.nix
-    ../../home/alacritty.nix
-    ../../home/neovim.nix
-    ../../home/neovim-go.nix
+    ../../home
   ];
 
   dconf.settings = {

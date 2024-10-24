@@ -8,8 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../system/neovim.nix
-    ../../system/default.nix
+    ../../system
   ];
 
   # Bootloader.
