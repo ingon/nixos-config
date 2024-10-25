@@ -12,28 +12,23 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = [ "mem_sleep_default=deep" ];
 
-  boot.initrd.luks.devices."luks-bd375b41-39ba-4d71-97dd-d3e2ead8843f".device = "/dev/disk/by-uuid/bd375b41-39ba-4d71-97dd-d3e2ead8843f";
+  boot.initrd.luks.devices."luks-a97370a2-38b8-4e1a-b007-c187e735db8d".device = "/dev/disk/by-uuid/a97370a2-38b8-4e1a-b007-c187e735db8d";
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/96f223e5-b1c4-49e1-86d5-2f01ed28a1f1";
+    device = "/dev/disk/by-uuid/31b69d83-a375-4060-b836-2c6debcc32d1";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/7A87-238D";
+    device = "/dev/disk/by-uuid/D7AD-D379";
     fsType = "vfat";
     options = [ "fmask=0077" "dmask=0077" ];
   };
 
-  boot.initrd.luks.devices."luks-f3fa456c-4afe-4c29-bff5-29bf315fb531".device = "/dev/disk/by-uuid/f3fa456c-4afe-4c29-bff5-29bf315fb531";
-  fileSystems."/data" = {
-    device = "/dev/disk/by-uuid/c0b63467-0334-40a3-ac17-40fe5bf20749";
-    fsType = "ext4";
-    options = [ "nofail" ];
-  };
-
-  swapDevices = [ ];
+  boot.initrd.luks.devices."luks-acd71dbd-8a09-4453-9304-f7c6bd53b460".device = "/dev/disk/by-uuid/acd71dbd-8a09-4453-9304-f7c6bd53b460";
+  swapDevices = [{
+    device = "/dev/disk/by-uuid/45a1bd04-5326-4911-b6eb-f4cf57f05b92";
+  }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

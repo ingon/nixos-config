@@ -106,9 +106,5 @@
     enable = true;
   };
 
-  systemd.sleep.extraConfig = ''
-    SuspendState=mem
-  '';
-
   system.stateVersion = "24.05";
 }

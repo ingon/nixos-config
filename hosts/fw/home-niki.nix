@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.username = "niki";
   home.homeDirectory = "/home/niki";
@@ -19,6 +19,8 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       monospace-font-name = "MesloLGM Nerd Font Mono 10";
+      color-scheme = "prefer-dark";
+      scaling-factor = lib.gvariant.mkUint32 2;
     };
   };
 
