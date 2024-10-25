@@ -21,6 +21,12 @@
       monospace-font-name = "MesloLGM Nerd Font Mono 10";
       color-scheme = "prefer-dark";
       scaling-factor = lib.gvariant.mkUint32 2;
+      show-battery-percentage = true;
+    };
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-enabled = true;
+      night-light-schedule-automatic = true;
+      night-light-temperature = lib.gvariant.mkUint32 3700;
     };
   };
 
