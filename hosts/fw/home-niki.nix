@@ -16,10 +16,7 @@
     ../../home
   ];
 
-  ingon.home-modules.neovim = {
-    enable = true;
-    enableVimgo = true;
-  };
+  ingon.home-modules.neovim.enableVimgo = true;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
