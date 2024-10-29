@@ -13,7 +13,7 @@
   ];
 
   imports = [
-    ../../home
+    ../../modules/home
   ];
 
   ingon.home-modules.neovim.enableVimgo = true;
