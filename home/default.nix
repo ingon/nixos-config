@@ -8,6 +8,5 @@
     ./helix.nix
     ./alacritty.nix
     ./neovim.nix
-    ./neovim-go.nix
   ];
 }

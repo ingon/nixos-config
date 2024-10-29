@@ -16,6 +16,11 @@
     ../../home
   ];
 
+  ingon.home-modules.neovim = {
+    enable = true;
+    enableVimgo = true;
+  };
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       monospace-font-name = "MesloLGM Nerd Font Mono 10";
