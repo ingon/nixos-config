@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     pkgs.unstable.dropbox
     synology-drive-client
+    opvaultfx
   ];
 
   imports = [
