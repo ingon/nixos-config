@@ -109,11 +109,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1730322774,
-        "narHash": "sha256-ZynMx4smUdtCIZbKvpwLO1iRUjNCyO/5rXIGCvpU4GM=",
+        "lastModified": 1730323867,
+        "narHash": "sha256-8wWvURh/IELOz/gm3RW8TRh3s6b3/r4AEC0PFNmORSQ=",
         "owner": "ingon",
         "repo": "opvaultfx",
-        "rev": "32be96ed3e7b2c9fc78cf42fea3f696b71bda185",
+        "rev": "496eb9f310f1ea462107ed6bafbaccf4570c0484",
         "type": "github"
       },
       "original": {
