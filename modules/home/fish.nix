@@ -2,6 +2,7 @@
 {
   programs.fish = {
     enable = true;
+    # preferAbbrs = true; // home-manager master
     shellAbbrs = {
       l = "eza --long";
       la = "eza --long --all";
