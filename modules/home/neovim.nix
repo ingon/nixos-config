@@ -4,10 +4,8 @@ let
 in
 {
   options.ingon.home-modules.neovim = {
-    enable = lib.mkOption {
-      type = lib.types.bool;
+    enable = lib.mkEnableOption "home-manager neovim config" // {
       default = true;
-      description = "home-manager neovim config";
     };
     enableVimgo = lib.mkEnableOption "enable vim-go integration";
   };

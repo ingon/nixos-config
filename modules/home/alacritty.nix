@@ -4,10 +4,8 @@ let
 in
 {
   options.ingon.home-modules.alacritty = {
-    enable = lib.mkOption {
-      type = lib.types.bool;
+    enable = lib.mkEnableOption "home-manager alacritty config" // {
       default = true;
-      description = "home-manager alacritty config";
     };
 
     font-family = lib.mkOption {

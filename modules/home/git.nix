@@ -4,10 +4,8 @@ let
 in
 {
   options.ingon.home-modules.git = {
-    enable = lib.mkOption {
-      type = lib.types.bool;
+    enable = lib.mkEnableOption "home-manager git config" // {
       default = true;
-      description = "home-manager git config";
     };
 
     email = lib.mkOption {
