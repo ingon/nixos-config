@@ -85,9 +85,11 @@
   users.users.niki = {
     isNormalUser = true;
     description = "Niki";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     shell = pkgs.fish;
   };
+
+  programs.adb.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;

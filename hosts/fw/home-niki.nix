@@ -13,6 +13,8 @@
     opvaultfx
   ];
 
+  programs.chromium.enable = true;
+
   imports = [
     ../../modules/home
   ];
