@@ -114,5 +114,8 @@
     openFirewall = true;
   };
 
+  boot.kernel.sysctl."net.core.rmem_max" = 7500000;
+  boot.kernel.sysctl."net.core.wmem_max" = 7500000;
+
   system.stateVersion = "24.05";
 }
