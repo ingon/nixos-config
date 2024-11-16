@@ -20,6 +20,8 @@
   ];
 
   ingon.home-modules.neovim.enableVimgo = true;
+  ingon.home-modules.helix.package = pkgs.unstable.helix;
+  ingon.home-modules.helix.enableGo = true;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {

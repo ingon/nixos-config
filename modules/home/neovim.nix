@@ -11,6 +11,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [ ] ++ lib.optionals cfg.enableVimgo [ go gopls ];
+
     programs.neovim = {
       enable = true;
       plugins = with pkgs.vimPlugins; [
