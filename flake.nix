@@ -12,7 +12,7 @@
     opvaultfx.url = "github:ingon/opvaultfx/master";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, ... }:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
