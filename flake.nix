@@ -10,9 +10,10 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     opvaultfx.url = "github:ingon/opvaultfx/master";
+    connet.url = "github:connet-dev/connet";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, ... }:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, connet, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -26,6 +27,7 @@
       overlay-unstable = final: prev: {
         unstable = pkgs-unstable;
         opvaultfx = opvaultfx.packages.${system}.default;
+        connet = connet.packages.${system}.default;
       };
     in
     {
@@ -51,6 +53,7 @@
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix
             }
+            connet.nixosModules.default
           ];
         };
       };

@@ -117,5 +117,15 @@
   boot.kernel.sysctl."net.core.rmem_max" = 7500000;
   boot.kernel.sysctl."net.core.wmem_max" = 7500000;
 
+  services.connet = {
+    enable = true;
+    user = "niki";
+    group = "users";
+    tokenFile = "/run/keys/connet.token";
+    serverAddr = "connet.stage-klev.dev:19190";
+    sources.graphana.addr = ":9000";
+  };
+  systemd.services.connet.serviceConfig.SupplementaryGroups = [ "keys" ];
+
   system.stateVersion = "24.05";
 }
