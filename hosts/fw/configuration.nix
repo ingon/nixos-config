@@ -97,7 +97,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+    gnome-tweaks
   ];
 
   fonts.packages = with pkgs; [
