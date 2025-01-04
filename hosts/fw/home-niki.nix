@@ -11,8 +11,19 @@
     pkgs.unstable.dropbox
     synology-drive-client
     opvaultfx
+    pkgs.unstable.ghostty
   ];
 
+  home.file.".config/ghostty/config" = {
+    enable = true;
+    text = ''
+      font-family = "MesloLGM Nerd Font Mono"
+      font-size = 10
+      theme = "Molokai"
+      cursor-style = "block"
+      cursor-style-blink = "false"
+    '';
+  };
   # programs.chromium.enable = true;
 
   imports = [

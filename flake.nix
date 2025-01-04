@@ -27,7 +27,6 @@
       overlay-unstable = final: prev: {
         unstable = pkgs-unstable;
         opvaultfx = opvaultfx.packages.${system}.default;
-        connet = connet.packages.${system}.default;
       };
     in
     {

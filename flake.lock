@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1735680767,
-        "narHash": "sha256-d9g3FJGem8dpD6xPoAViZ2Ey1sCLsrWjhEhWdTFymok=",
+        "lastModified": 1735948123,
+        "narHash": "sha256-Bav9XCZ6pkEZ3jzKSiWnaQwqQ+WiskdZFBz468roAU8=",
         "owner": "connet-dev",
         "repo": "connet",
-        "rev": "713a168eb5e5ac02289b6a322ce92af0ad71bd6e",
+        "rev": "2d2b05452bf374227f10dbce8cf5dc800a838566",
         "type": "github"
       },
       "original": {
@@ -110,11 +110,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1734649271,
-        "narHash": "sha256-4EVBRhOjMDuGtMaofAIqzJbg4Ql7Ai0PSeuVZTHjyKQ=",
+        "lastModified": 1735834308,
+        "narHash": "sha256-dklw3AXr3OGO4/XT1Tu3Xz9n/we8GctZZ75ZWVqAVhk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
+        "rev": "6df24922a1400241dae323af55f30e4318a6ca65",
         "type": "github"
       },
       "original": {
