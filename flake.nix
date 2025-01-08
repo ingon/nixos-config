@@ -32,9 +32,7 @@
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          nixpkgs-fmt
-        ];
+        buildInputs = [ ];
       };
       nixosConfigurations = {
         fw = nixpkgs.lib.nixosSystem {

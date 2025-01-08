@@ -8,20 +8,14 @@ in
       default = true;
     };
 
-    package = lib.mkOption {
-      type = lib.types.package;
-      default = pkgs.helix;
-      defaultText = lib.literalExpression "pkgs.helix";
-      example = lib.literalExpression "pkgs.evil-helix";
-      description = "The package to use for helix.";
-    };
+    package = lib.mkPackageOption pkgs "helix" { };
 
     enableGo = lib.mkEnableOption "add gopls to support go repos";
   };
 
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
-      nil
+      nixd
       nixpkgs-fmt
     ] ++ lib.optionals cfg.enableGo [ go gopls ];
 
@@ -30,19 +24,21 @@ in
       package = cfg.package;
       defaultEditor = true;
       languages = {
-        language-server.nil = {
-          command = "nil";
-          config.nil.formatting.command = [ "nixpkgs-fmt" ];
+        language-server.nixd = {
+          command = "nixd";
+          config.nixd.formatting.command = [ "nixpkgs-fmt" ];
         };
         language = [{
           name = "nix";
           auto-format = true;
+          language-servers = [ "nixd" ];
         }];
       };
       settings = {
-        theme = "molokai";
+        theme = "molokai-niki";
         editor = {
           true-color = true;
+          end-of-line-diagnostics = "hint";
           statusline = {
             center = [ "file-type" "file-encoding" "version-control" ];
             right = [ "diagnostics" "selections" "register" "position-percentage" "position" "file-encoding" ];
@@ -54,6 +50,9 @@ in
             display-messages = true;
             display-inlay-hints = true;
           };
+          inline-diagnostics = {
+            cursor-line = "warning";
+          };
         };
         keys.normal = {
           C-s = ":w";
@@ -62,6 +61,15 @@ in
           "$" = "goto_line_end_newline";
           esc = [ "collapse_selection" "keep_primary_selection" ];
           space.i = ":toggle lsp.display-inlay-hints";
+        };
+      };
+      themes = {
+        "molokai-niki" = {
+          "inherits" = "molokai";
+          "error" = { fg = "#f48771"; modifiers = [ "bold" ]; };
+          "warning" = { fg = "#cca700"; modifiers = [ "bold" ]; };
+          "info" = { fg = "#75beff"; modifiers = [ "bold" ]; };
+          "hint" = { fg = "#eeeeb3"; modifiers = [ "bold" ]; };
         };
       };
     };
