@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1736289347,
-        "narHash": "sha256-I888atq9Oy0WJK+pHWABSHRR3QIpq4LX52+H2Y5iGbA=",
+        "lastModified": 1736378175,
+        "narHash": "sha256-Rn0B7WFeBU+VMRlUpAJ0FJtJEWDCqb6mBNhrHy5tV8s=",
         "owner": "connet-dev",
         "repo": "connet",
-        "rev": "cd7dffffb82e0d0bcedbc3c3bd5c8df6a4a594f6",
+        "rev": "c439425d68bcb5926a5124e05facd32edfaec323",
         "type": "github"
       },
       "original": {
