@@ -123,6 +123,7 @@
     group = "users";
     tokenFile = "/run/keys/connet.token";
     serverAddr = "connet.stage-klev.dev:19190";
+    directPort = 19199;
     sources.graphana.addr = ":9000";
   };
   systemd.services.connet.serviceConfig.SupplementaryGroups = [ "keys" ];
