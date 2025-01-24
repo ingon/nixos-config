@@ -32,13 +32,15 @@
     {
       formatter.x86_64-linux = pkgs.nixpkgs-fmt;
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [ ];
+        buildInputs = [
+          connet.packages."x86_64-linux".default
+        ];
       };
       nixosConfigurations = {
         fw = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+            ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             nixos-hardware.nixosModules.framework-11th-gen-intel
             ./hosts/fw/configuration.nix
             home-manager.nixosModules.home-manager
