@@ -11,9 +11,10 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     opvaultfx.url = "github:ingon/opvaultfx/master";
     connet.url = "github:connet-dev/connet";
+    helix.url = "github:helix-editor/helix";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, connet, ... }:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, connet, helix, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -27,6 +28,7 @@
       overlay-unstable = final: prev: {
         unstable = pkgs-unstable;
         opvaultfx = opvaultfx.packages.${system}.default;
+        helix-main = helix.packages.${system}.default;
       };
     in
     {
