@@ -9,7 +9,7 @@
   ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "usb_storage" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
@@ -18,7 +18,12 @@
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-d4197bce-27f2-4264-bc8e-82df6f438ea1".device = "/dev/disk/by-uuid/d4197bce-27f2-4264-bc8e-82df6f438ea1";
+  boot.initrd.luks.devices."luks-d4197bce-27f2-4264-bc8e-82df6f438ea1" = {
+    device = "/dev/disk/by-uuid/d4197bce-27f2-4264-bc8e-82df6f438ea1";
+    allowDiscards = true;
+    keyFileSize = 4096;
+    keyFile = "/dev/sdb";
+  };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/A874-FA7C";
