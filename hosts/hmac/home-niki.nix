@@ -9,4 +9,6 @@
   imports = [
     ../../modules/home
   ];
+
+  ingon.home-modules.helix.package = pkgs.helix-main;
 }
