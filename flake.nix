@@ -10,7 +10,7 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     opvaultfx.url = "github:ingon/opvaultfx/master";
-    connet.url = "github:connet-dev/connet";
+    connet.url = "github:connet-dev/connet/v0.7.1";
     helix.url = "github:helix-editor/helix";
   };
 

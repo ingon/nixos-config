@@ -124,7 +124,7 @@
       token-file = "/run/keys/connet.token";
       server-addr = "connet.stage-klev.dev:19190";
       direct-addr = ":19199";
-      sources.graphana.addr = ":9000";
+      sources.graphana.url = "tcp://:9000";
     };
   };
   systemd.services.connet-client.serviceConfig.SupplementaryGroups = [ "keys" ];
