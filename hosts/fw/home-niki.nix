@@ -7,11 +7,12 @@
   programs.home-manager.enable = true;
 
   # configuration follows
-  home.packages = with pkgs; [
+  home.packages = [
     pkgs.unstable.dropbox
-    synology-drive-client
-    opvaultfx
+    pkgs.synology-drive-client
+    pkgs.opvaultfx
     pkgs.unstable.ghostty
+    pkgs.authenticator
   ];
 
   home.file.".config/ghostty/config" = {
