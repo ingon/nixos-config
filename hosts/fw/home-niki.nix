@@ -61,4 +61,6 @@
       Restart = "on-failure";
     };
   };
+
+  services.nextcloud-client.enable = true;
 }
