@@ -11,21 +11,8 @@
     pkgs.unstable.dropbox
     pkgs.synology-drive-client
     pkgs.opvaultfx
-    pkgs.unstable.ghostty
     pkgs.authenticator
   ];
-
-  home.file.".config/ghostty/config" = {
-    enable = true;
-    text = ''
-      font-family = "MesloLGM Nerd Font Mono"
-      font-size = 10
-      theme = "Molokai"
-      cursor-style = "block"
-      cursor-style-blink = "false"
-    '';
-  };
-  # programs.chromium.enable = true;
 
   imports = [
     ../../modules/home
@@ -61,8 +48,6 @@
       Restart = "on-failure";
     };
   };
-
-  services.nextcloud-client.enable = true;
 
   services.syncthing.enable = true;
 }
