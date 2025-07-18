@@ -19,7 +19,7 @@
   ];
 
   ingon.home-modules.neovim.enableVimgo = true;
-  ingon.home-modules.helix.package = pkgs.helix-main;
+  ingon.home-modules.helix.package = pkgs.unstable.helix;
   ingon.home-modules.helix.enableGo = true;
 
   dconf.settings = {
@@ -50,4 +50,5 @@
   };
 
   services.syncthing.enable = true;
+  programs.keepassxc.enable = true;
 }

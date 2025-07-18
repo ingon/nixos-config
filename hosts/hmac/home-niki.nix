@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   home.username = "niki";
   home.homeDirectory = "/home/niki";
@@ -10,5 +10,5 @@
     ../../modules/home
   ];
 
-  ingon.home-modules.helix.package = pkgs.helix-main;
+  ingon.home-modules.helix.package = pkgs.unstable.helix;
 }
