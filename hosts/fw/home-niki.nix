@@ -12,7 +12,6 @@
     pkgs.synology-drive-client
     pkgs.opvaultfx
     pkgs.authenticator
-    pkgs.localsend
   ];
 
   imports = [
