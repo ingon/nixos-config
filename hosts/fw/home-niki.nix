@@ -8,8 +8,6 @@
 
   # configuration follows
   home.packages = [
-    pkgs.unstable.dropbox
-    pkgs.synology-drive-client
     pkgs.opvaultfx
     pkgs.authenticator
   ];
@@ -33,19 +31,6 @@
       night-light-enabled = true;
       night-light-schedule-automatic = true;
       night-light-temperature = lib.gvariant.mkUint32 3700;
-    };
-  };
-
-  systemd.user.services.dropbox = {
-    Unit = {
-      Description = "Dropbox service";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.unstable.dropbox}/bin/dropbox";
-      Restart = "on-failure";
     };
   };
 
