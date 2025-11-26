@@ -10,6 +10,7 @@
   home.packages = [
     pkgs.opvaultfx
     pkgs.authenticator
+    pkgs.unstable.gajim
   ];
 
   imports = [
