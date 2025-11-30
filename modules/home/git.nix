@@ -18,13 +18,19 @@ in
   config = lib.mkIf cfg.enable {
     programs.git = {
       enable = true;
-      userEmail = cfg.email;
-      userName = "Nikolay Petrov";
-      diff-so-fancy.enable = true;
-      extraConfig = {
+      settings = {
+        user = {
+          email = cfg.email;
+          name = "Nikolay Petrov";
+        };
         rerere.enabled = true;
         init.defaultBranch = "main";
       };
+    };
+
+    programs.diff-so-fancy = {
+      enable = true;
+      enableGitIntegration = true;
     };
   };
 }
