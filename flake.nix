@@ -10,7 +10,7 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     opvaultfx.url = "github:ingon/opvaultfx/master";
-    connet.url = "github:connet-dev/connet/v0.9.2";
+    connet.url = "github:connet-dev/connet/v0.10.1";
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, opvaultfx, connet, ... }:
